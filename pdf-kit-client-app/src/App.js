@@ -82,19 +82,24 @@ function App() {
     }
   };
   return (
-    <div className="App">
-      <Button variant="text" onClick={handleDownload}>
-        Download File
-      </Button>
-
-      <TextField
-        label="Search"
-        variant="outlined"
-        fullWidth
-        margin="normal"
-        value={searchText}
-        onChange={handleSearchChange}
-      />
+    <div className="container mt-4">
+      <div className="row mb-3">
+        <div className="col-md-6 mb-2 mb-md-0">
+          <Button variant="contained" color="primary" onClick={handleDownload}>
+            Download File
+          </Button>
+        </div>
+        <div className="col-md-6">
+          <TextField
+            label="Search"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={searchText}
+            onChange={handleSearchChange}
+          />
+        </div>
+      </div>
 
       <TableContainer component={Paper}>
         <Table>
@@ -119,15 +124,17 @@ function App() {
         </Table>
       </TableContainer>
 
-      <TablePagination
-        rowsPerPageOptions={[5, 10, 25]}
-        component="div"
-        count={totalRecords}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-      />
+      <div className="d-flex justify-content-end mt-3">
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={totalRecords}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
+      </div>
     </div>
   );
 }
