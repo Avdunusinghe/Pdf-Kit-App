@@ -20,7 +20,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Enable All CORS Requests
-app.use(cors());
+app.use(
+	cors({
+		origin: "*",
+		allowedHeaders: "*",
+		exposedHeaders: ["Content-Disposition", "Content-Type"],
+	})
+);
 
 app.use(helmet());
 

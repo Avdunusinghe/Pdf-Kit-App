@@ -22,7 +22,8 @@
 		"nodemon": "^2.0.19",
 		"pdfkit": "^0.13.0",
 		"pino": "^8.4.1",
-		"pino-pretty": "^9.0.1"
+		"pino-pretty": "^9.0.1",
+		"uuid": "^10.0.0"
 	},
 	"devDependencies": {
 		"helmet": "^5.1.1",
