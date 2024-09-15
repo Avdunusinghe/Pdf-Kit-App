@@ -16,7 +16,7 @@ Features
 Clone the project
 
 ```bash
-  git clone https://github.com/Avdunusinghe/Pdf-Kit-App/tree/main
+  git clone https://github.com/Avdunusinghe/Pdf-Kit-App.git
 ```
 
 Go to the project directory
