@@ -5,23 +5,23 @@ const logger = require("../utils/logger");
 
 const pdfData = {
 	shipping: {
-		name: "John Doe",
+		name: "Ashen Dunusinghe",
 		address: "1234 Main Street",
-		city: "San Francisco",
-		state: "CA",
-		country: "US",
-		postal_code: 94111,
+		city: "Delgoda",
+		state: "Western",
+		country: "Sri Lanka",
+		postal_code: 11700,
 	},
 	items: [
 		{
-			item: "TC 100",
-			description: "Toner Cartridge",
+			item: "PDF KIT Demo Pack ",
+			description: "For ITP Students",
 			quantity: 2,
 			amount: 6000,
 		},
 		{
-			item: "USB_EXT",
-			description: "USB Cable Extender",
+			item: ".NET Development",
+			description: ".NET Development Pack",
 			quantity: 1,
 			amount: 2000,
 		},
@@ -33,8 +33,8 @@ const pdfData = {
 
 const generatePdf = async (request, response) => {
 	try {
-		// Define invoice data and create a new PDF document ** you need to get data from database
-		const invoice = pdfData;
+		// Define invoice data and create a new PDF document
+		const invoice = pdfData; //** you need to get data from database
 		const document = new PDFDocument({ size: "A4", margin: 50 });
 		const fileName = `Invoice_${uuidv4()}`;
 
@@ -67,11 +67,11 @@ const generateHeader = (document) => {
 		})
 		.fillColor("#444444")
 		.fontSize(20)
-		.text("ACME Inc.", 110, 57)
+		.text("Ashen Development.", 110, 57)
 		.fontSize(10)
-		.text("ACME Inc.", 200, 50, { align: "right" })
-		.text("123 Main Street", 200, 65, { align: "right" })
-		.text("New York, NY, 10025", 200, 80, { align: "right" })
+		.text("Ashen Inc.", 200, 50, { align: "right" })
+		.text("123, Delgoda", 200, 65, { align: "right" })
+		.text("Delgoda, SL, 11700", 200, 80, { align: "right" })
 		.moveDown();
 };
 
