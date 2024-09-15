@@ -35,7 +35,7 @@ Start the server
   npm run local:server
 ```
 
-Start the server
+Start the Client App
 
 ```bash
   npm run start
